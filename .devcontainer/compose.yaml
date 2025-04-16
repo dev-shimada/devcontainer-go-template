@@ -1,0 +1,22 @@
+services:
+  api:
+    build:
+      target: vscode
+      context: ../api
+      dockerfile: Dockerfile
+    image: devcontainer-go-template-api
+    # ports:
+    #   - "8081:8081"
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+  web:
+    build:
+      context: ../web
+      dockerfile: Dockerfile
+    image: devcontainer-go-template-web
+    # ports:
+    #   - "3000:3000"
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
