@@ -1,0 +1,17 @@
+{
+    "name": "devcontainer-go-template-web",
+    "dockerComposeFile": "../compose.yaml",
+    "service": "web",
+    "workspaceFolder": "/workspace/web",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.vscode-typescript-next",
+                "msjsdiag.vscode-react-native",
+                "GitHub.copilot"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "postCreateCommand": "/bin/bash /workspace/.devcontainer/post_created.sh"
+}

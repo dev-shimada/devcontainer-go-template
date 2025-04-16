@@ -1,0 +1,16 @@
+{
+    "name": "devcontainer-go-template-api",
+    "dockerComposeFile": "../compose.yaml",
+    "service": "api",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.Go",
+                "GitHub.copilot"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "postCreateCommand": "/bin/bash /workspace/.devcontainer/post_created.sh"
+}
